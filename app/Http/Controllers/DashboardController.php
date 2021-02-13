@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -16,13 +18,24 @@ class DashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $users)
     {
-        return view('dashboard');
+        $user = auth()->user();
+        $posts = Post::where('user_id',$user->id)->limit(4)->get();
+
+
+        $table = DB::table('views')->select('viewable_id',$user->id)->get();
+        dd($table);
+
+
+        return view('dashboard',[
+            'posts'=>$posts,
+            ]);
     }
 
     public function home(){
         $posts = Post::latest()->paginate(10);
+
 
         return view('home',[
             'posts'=>$posts,

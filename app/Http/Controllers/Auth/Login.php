@@ -35,7 +35,12 @@ class Login extends Controller
         if (!auth()->attempt($request->only('email','password'),$request->remember)) {
             return back()->with("Invalid login details");
         }else{
-            return redirect()->route('home');
+            if (auth()->check() && auth()->user()->hasRole('writer')){
+                return redirect()->route('dashboard');
+            }else{
+                return redirect()->route('home');
+
+            }
         }
     }
 

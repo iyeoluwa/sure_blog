@@ -8,11 +8,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Post;
 use App\Models\Permissions\HasPermissionsTrait;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Viewable
 {
+    use InteractsWithViews;
     use HasFactory, Notifiable;
     use  HasPermissionsTrait;
+
 
     /**
      * The attributes that are mass assignable.
