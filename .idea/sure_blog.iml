@@ -120,6 +120,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/jaybizzle/crawler-detect" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sopamo/laravel-filepond" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mtownsend/read-time" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
