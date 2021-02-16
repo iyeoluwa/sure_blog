@@ -14,7 +14,7 @@ class AddSummaryToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->longText('summary')->change();
+            $table->longText('summary');
         });
     }
 
