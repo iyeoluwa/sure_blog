@@ -62,14 +62,14 @@ class PermissionController extends Controller
 //        $developer->roles()->attach($dev_role);
 //        $developer->permissions()->attach($dev_perm);
 //
-//        $manager  = new User();
-//        $manager->name = 'Olushola Olatoke';
-//        $manager->email = 'sholaolatoke@yahoo.com';
-//        $manager->password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
-//        $manager->username = 'olushola';
-//        $manager->save();
-//        $manager->roles()->attach($manager_role);
-//        $manager->permissions()->attach($manager_perm);
+        $manager  = new User();
+        $manager->name = 'Adedayo fajimi';
+        $manager->email = 'dayofajimi@yahoo.com';
+        $manager->password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
+        $manager->username = 'dayofajimi';
+        $manager->save();
+        $manager->roles()->attach($manager_role);
+        $manager->permissions()->attach($manager_perm);
 
         return redirect()->back();
     }
