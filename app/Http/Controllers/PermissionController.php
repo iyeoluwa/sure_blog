@@ -63,8 +63,8 @@ class PermissionController extends Controller
 //        $developer->permissions()->attach($dev_perm);
 //
         $manager  = new User();
-        $manager->name = 'Olufunke Fajimi';
-        $manager->email = 'olufunkefajimi@yahoo.com';
+        $manager->name = 'Adedayo Fajimi';
+        $manager->email = 'adedayofajimi@yahoo.com';
         $manager->password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi';
         $manager->username = 'olufunkefajimi';
         $manager->save();
