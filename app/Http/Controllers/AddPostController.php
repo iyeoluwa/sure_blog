@@ -20,7 +20,7 @@ class AddPostController extends Controller
 
           $validated =  $request->validate([
                     'title'=>'required',
-                    'vacancyImageFiles'=>'mimes:jpeg,png,gif|max:1024|required',
+                    'vacancyImageFiles'=>'mimes:jpeg,JPG,jpg,PNG,png,gif|max:1024|required',
                     'summary'=>'required',
                     'contents'=>'required',
                 ]);

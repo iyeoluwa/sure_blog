@@ -24,10 +24,6 @@ class DashboardController extends Controller
         $posts = Post::where('user_id',$user->id)->limit(4)->get();
 
 
-        $table = DB::table('views')->select('viewable_id',$user->id)->get();
-        dd($table);
-
-
         return view('dashboard',[
             'posts'=>$posts,
             ]);

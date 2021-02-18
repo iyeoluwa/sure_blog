@@ -21,7 +21,7 @@
               @endrole
             @endauth
           <div class="w-full h-auto flex-col flex md:flex-row lg:flex-row xl:flex-row p-2 md:pt-8 md:flex-wrap md:items-center md:justify-center" id="">
-
+ @if($posts->count())
   @foreach($posts as $post)
                 <div class="lg:w-4/12 xl:w-3/12 md:w-5/12 md:m-6 w-full xl:mx-1 mx-auto bg-white my-6 mx-1 shadow-md overflow-hidden">
                     <div class="">
@@ -36,6 +36,10 @@
                     </div>
                 </div>
 @endforeach
+       @else
+
+       <div class="">There are no articles yet </div>
+       @endif
             </div>
 
 
