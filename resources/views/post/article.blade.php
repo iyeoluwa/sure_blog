@@ -3,6 +3,12 @@
 @section('title',$post->title.' - article')
 @section('content')
     @prepend('scripts')
+        <meta name="twitter:card" content="summary_large_image">
+{{--<meta name="twitter:site" content="@nytimes">--}}
+{{--<meta name="twitter:creator" content="@SarahMaslinNir">--}}
+<meta name="twitter:title" content="{{$post->title}}">
+<meta name="twitter:description" content="{{$post->summary}}">
+<meta name="twitter:image" content="{{asset($post->cover_image)}}">
         <link rel="stylesheet" type="text/css" href="{{asset('css/trix.css')}}">
 {{--        <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome.css')}}">--}}
         <link rel="stylesheet" type="text/css" href="{{asset('css/all.min.css')}}">
