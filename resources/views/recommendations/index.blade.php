@@ -4,7 +4,7 @@
     @foreach($query as $query)
         <div class="w-full flex flex-row h-32 md:w-3/12 mx-2">
             <div class="w-6/12 flex flex-wrap capitalize font-futura align-middle mr-2  tracking-wide text-md md:text-left">
-                {{$query->title}}
+                <a href="{{route('article.show',$query->id)}}">{{$query->title}}</a>
             </div>
             <div class="w-6/12 flex flex-wrap ">
                 <div class="w-full h-auto mx-auto">

@@ -19,7 +19,7 @@ class UserPostController extends Controller
 
 
         views($post)->cooldown($expires)->record();
-        $count = views($post)->count();
+        $count = views($post)->remember(120)->count();
 
 
         $query = Post::where(['user_id'=>$post->user_id])->where('id','!=',$post->id)->take(4)->get();

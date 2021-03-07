@@ -1,1 +1,0 @@
-SELECT * FROM posts  INNER JOIN users ON user_id = users.id WHERE user_id = users.id ORDER BY users.id LIMIT 1

@@ -6,6 +6,7 @@
         <meta name="twitter:card" content="summary_large_image">
 {{--<meta name="twitter:site" content="@nytimes">--}}
 {{--<meta name="twitter:creator" content="@SarahMaslinNir">--}}
+
 <meta name="twitter:title" content="{{$post->title}}">
 <meta name="twitter:description" content="{{$post->summary}}">
 <meta name="twitter:image" content="{{asset($post->cover_image)}}">
@@ -32,7 +33,10 @@
             <div class="w-full h-auto md:my-2 mx-auto">
                 <img class="object-cover w-full m-auto block" src="{{asset($post->cover_image)}}"/>
             </div>
-            <div class="w-full px-4 lg:pt-20 py-5 flex flex-col align-middle justify-center h-auto">
+{{--            <div class="w-full h-auto bg-white text-black py-6 ">--}}
+{{--                <a href="{{back()}}" class="underline capitalize leading-4 tracking-wide">back to previous page</a>--}}
+{{--            </div>--}}
+            <div class="w-full px-4 lg:pt-5 py-5 flex flex-col align-middle justify-center h-auto">
                 <div class="w-full flex flex-row my-6 justify-between bg-gray-100 px-2 py-4 md:bg-white">
                     <small class="md:text-lg capitalize "><li class="fa fa-eye inline-flex mr-2"></li>{{$count. ' views'}}</small>
                     <small class="md:text-lg capitalize "><li class="fa fa-clock inline-flex mr-2"></li>{{read_time($post->content)}}</small>
