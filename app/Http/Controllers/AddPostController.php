@@ -26,7 +26,13 @@ class AddPostController extends Controller
                 ]);
         if($request->hasFile('vacancyImageFiles')){
 
-            $filenamewithextension = $request->file('vacancyImageFiles')->getClientOriginalName();
+
+
+
+
+                    if(App::environment('local')){
+
+             $filenamewithextension = $request->file('vacancyImageFiles')->getClientOriginalName();
             $filename = pathinfo($filenamewithextension,PATHINFO_FILENAME);
             $extension = $request->file('vacancyImageFiles')->getClientOriginalExtension();
             $filenametostore = $filename.'_'.time().'.'.$extension;
@@ -40,9 +46,38 @@ class AddPostController extends Controller
             'summary'=>$request->summary,
             'content'=>$request->contents,
             'cover_image'=>$path,
+
+
+
+
+
         ]);
+            return redirect()->route('dashboard');
+        }else{
+
+            $uploadedFileUrl = cloudinary()->upload($request->file('vacancyImageFiles')->getRealPath(),[
+                'folder'=>'sureword',
+            ])->getPath();
+            $post = $request->user()->posts()->create([
+            'title'=>$request->title,
+            'summary'=>$request->summary,
+            'content'=>$request->contents,
+
+            'cover_image'=>$uploadedFileUrl,
+            ]);
+
+            return redirect()->route('dashboard');
+        }
 
         }
+
+
+
+
+
+
+
+
 
         return back();
     }
