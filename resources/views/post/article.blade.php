@@ -3,13 +3,21 @@
 @section('title',$post->title.' - article')
 @section('content')
     @prepend('scripts')
-        <meta name="twitter:card" content="summary_large_image">
-{{--<meta name="twitter:site" content="@nytimes">--}}
-{{--<meta name="twitter:creator" content="@SarahMaslinNir">--}}
-
-<meta name="twitter:title" content="{{$post->title}}">
-<meta name="twitter:description" content="{{$post->summary}}">
-<meta name="twitter:image" content="{{asset($post->cover_image)}}">
+         <meta property="og:site_name" content="A More Sure Word | Blog" />
+        <meta property=“og:title" content="{{$post->title}}" />
+        <meta name="twitter:title" content="{{$post->title}}">
+        <meta property="og:description" content="{{$post->summary}}" />
+        <meta property="og:url" content="{{url()->full()}}" />
+        <meta property="og:type" content="article" />
+        <meta property="article:publisher" content="https://www.amoresureword.com" />
+        <meta property="article:section" content="gospel" />
+        <meta property="article:tag" content="gospel" />
+        <meta property="og:image" content="{{$post->cover_image}}" />
+        <meta property="og:image:secure_url" content="{{$post->cover_image}}" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content="{{$post->cover_image}}" />
         <link rel="stylesheet" type="text/css" href="{{asset('css/trix.css')}}">
 {{--        <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome.css')}}">--}}
         <link rel="stylesheet" type="text/css" href="{{asset('css/all.min.css')}}">
