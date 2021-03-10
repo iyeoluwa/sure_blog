@@ -2,15 +2,15 @@
 @section('title',"Home Page")
 @section('content')
 @prepend('scripts')
-    <meta property="og:site_name" content="A More Sure Word Blog | Olufunke Fajimi" />
-        <meta property="og:title" content="A More Sure Word Blog | Olufunke Fajimi" />
+    <meta property="og:site_name" content="A More Sure Word Blog" />
+        <meta property="og:title" content="A More Sure Word Blog" />
         <meta property="og:description" content="Official Blog Of A MoreSureword" />
         <meta property="og:url" content="{{url()->full()}}" />
         <meta property="og:type" content="blog" />
-        <meta property="og:image" content="{{asset('img/stencil.default.png')}}" />
+        <meta property="og:image" content="{{asset('img/stencil.default(1).png')}}" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:image" content="{{asset('img/stencil.default.png')}}" />
-        <meta property="twitter:site" content="@olufunkefajimi" />
+        <meta property="twitter:image" content="{{asset('img/stencil.default(1).png')}}" />
+        <meta property="twitter:site" content="@adedayofajimi" />
     @endprepend
 
 
