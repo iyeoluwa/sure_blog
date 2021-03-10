@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('title',$post->title.' - article')
-@section('content')
-    @prepend('scripts')
-         <meta property="og:site_name" content="A More Sure Word | Blog" />
+@prepend('tag')
+    <meta property="og:site_name" content="A More Sure Word | Blog" />
         <meta property=“og:title" content="{{$post->title}}" />
         <meta name="twitter:title" content="{{$post->title}}">
         <meta property="og:description" content="{{$post->summary}}" />
@@ -18,6 +17,11 @@
         <meta property="og:image:height" content="640" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:image" content="{{$post->cover_image}}" />
+@endprepend
+@section('content')
+
+    @prepend('scripts')
+
         <link rel="stylesheet" type="text/css" href="{{asset('css/trix.css')}}">
 {{--        <link rel="stylesheet" type="text/css" href="{{asset('css/fontawesome.css')}}">--}}
         <link rel="stylesheet" type="text/css" href="{{asset('css/all.min.css')}}">

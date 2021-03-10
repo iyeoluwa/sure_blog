@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title',"Home Page")
-@section('content')
-@prepend('scripts')
+@prepend('tag')
     <meta property="og:site_name" content="A More Sure Word Blog" />
         <meta property="og:title" content="A More Sure Word Blog" />
         <meta property="og:description" content="Official Blog Of A MoreSureword" />
@@ -10,8 +9,9 @@
         <meta property="og:image" content="{{asset('img/stencil.default(1).png')}}" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:image" content="{{asset('img/stencil.default(1).png')}}" />
-        <meta property="twitter:site" content="@adedayofajimi" />
     @endprepend
+@section('content')
+
 
 
 

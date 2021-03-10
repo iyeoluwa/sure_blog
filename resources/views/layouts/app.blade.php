@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
 
     <title>sureword Blog | @yield('title', 'Welcome')</title>
+    @stack('tag')
 </head>
 <body class="">
 
