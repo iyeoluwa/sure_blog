@@ -10,9 +10,9 @@
         <meta property="og:description" content="Official Blog Of A MoreSureword" />
         <meta property="og:url" content="{{url()->full()}}" />
         <meta property="og:type" content="blog" />
-        <meta property="og:image" content="{{asset('img/stencil.default(1).png')}}" />
+        <meta property="og:image" content="{{asset('img/stencil.default(1).jpg')}}" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:image" content="{{asset('img/stencil.default(1).png')}}" />
+        <meta property="twitter:image" content="{{asset('img/stencil.default(1).jpg')}}" />
     <title>sureword Blog | ,Home Page</title>
 
 </head>
