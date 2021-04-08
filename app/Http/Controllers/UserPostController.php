@@ -18,6 +18,7 @@ class UserPostController extends Controller
         $expires = now()->addMinutes($totalminutes);
 
 
+
         views($post)->cooldown($expires)->record();
         $count = views($post)->remember(120)->count();
 
